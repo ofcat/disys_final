@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="JavaFX" />
+        <module name="jms-example-topic" />
+        <module name="jms-example-queue-selector" />
+        <module name="restapi" />
+        <module name="jms-example-transaction" />
+        <module name="amqp-example" />
+        <module name="jms-example-exclusive-consumer" />
+        <module name="jms-example-composite-destinations" />
+        <module name="jms-example-message-browser" />
+        <module name="jms-example-queue" />
+        <module name="jms-example-temp-destinations" />
+        <module name="openwire-example" />
+        <module name="mqtt-example" />
+        <module name="jms-example-durable-sub" />
+        <module name="stomp-example" />
+        <module name="jms-example-wildcard-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="advanced-openwire-example" target="1.8" />
+      <module name="amqp-example" target="1.8" />
+      <module name="JavaFX" target="17" />
+      <module name="jms-example-composite-destinations" target="1.8" />
+      <module name="jms-example-durable-sub" target="1.8" />
+      <module name="jms-example-exclusive-consumer" target="1.8" />
+      <module name="jms-example-message-browser" target="1.8" />
+      <module name="jms-example-queue" target="1.8" />
+      <module name="jms-example-queue-selector" target="1.8" />
+      <module name="jms-example-temp-destinations" target="1.8" />
+      <module name="jms-example-topic" target="1.8" />
+      <module name="jms-example-transaction" target="1.8" />
+      <module name="jms-example-wildcard-consumer" target="1.8" />
+      <module name="mqtt-example" target="1.8" />
+      <module name="openwire-example" target="1.8" />
+      <module name="restapi" target="17" />
+      <module name="stomp-example" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="restapi" options="-parameters" />
+    </option>
+  </component>
+</project>

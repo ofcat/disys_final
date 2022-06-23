@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/amqp/java/pom.xml" />
+        <option value="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/mqtt/java/pom.xml" />
+        <option value="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/stomp/java/pom.xml" />
+        <option value="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/java/pom.xml" />
+        <option value="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/pom.xml" />
+        <option value="$PROJECT_DIR$/JavaFX/pom.xml" />
+        <option value="$PROJECT_DIR$/restapi/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-17" project-jdk-type="JavaSDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
+</project>

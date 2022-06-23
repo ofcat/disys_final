@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaFX/JavaFX.iml" filepath="$PROJECT_DIR$/JavaFX/JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/advanced-openwire-example.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/advanced-openwire-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/amqp/java/amqp-example.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/amqp/java/amqp-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/disys final.iml" filepath="$PROJECT_DIR$/.idea/disys final.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-composite-destinations/jms-example-composite-destinations.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-composite-destinations/jms-example-composite-destinations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-durable-sub/jms-example-durable-sub.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-durable-sub/jms-example-durable-sub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-exclusive-consumer/jms-example-exclusive-consumer.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-exclusive-consumer/jms-example-exclusive-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-message-browser/jms-example-message-browser.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-message-browser/jms-example-message-browser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-queue/jms-example-queue.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-queue/jms-example-queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-queue-selector/jms-example-queue-selector.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-queue-selector/jms-example-queue-selector.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-temp-destinations/jms-example-temp-destinations.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-temp-destinations/jms-example-temp-destinations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-topic/jms-example-topic.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-topic/jms-example-topic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-transaction/jms-example-transaction.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-transaction/jms-example-transaction.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-wildcard-consumer/jms-example-wildcard-consumer.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/advanced-scenarios/jms-example-wildcard-consumer/jms-example-wildcard-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/mqtt/java/mqtt-example.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/mqtt/java/mqtt-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/java/openwire-example.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/openwire/java/openwire-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restapi/restapi.iml" filepath="$PROJECT_DIR$/restapi/restapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/stomp/java/stomp-example.iml" filepath="$PROJECT_DIR$/Queue/apache-activemq-5.16.5/examples/stomp/java/stomp-example.iml" />
+    </modules>
+  </component>
+</project>
