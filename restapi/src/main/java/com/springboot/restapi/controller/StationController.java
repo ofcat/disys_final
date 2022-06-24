@@ -107,7 +107,7 @@ public class StationController {
         }
 
 
-        public void generateInvoice(List stations) throws IOException {
+        public void generateInvoice(List<CustomerStationData> stations) throws IOException {
 
 
             //System.out.println(stations);
@@ -118,14 +118,22 @@ public class StationController {
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
+
+
+
             Paragraph loremIpsumHeader = new Paragraph("Customer Invoice")
                     .setFont(PdfFontFactory.createFont(StandardFonts.HELVETICA))
                     .setFontSize(14)
                     .setBold()
                     .setFontColor(ColorConstants.BLACK);
             document.add(loremIpsumHeader);
+
+            for(CustomerStationData csd : stations){
+                document.add(new Paragraph(csd.toString()));
+//                document.add(new Paragraph(String.valueOf(csd.id_station)));
+//                document.add(new Paragraph(String.valueOf(csd.id_customer)));
+            }
             document.add(new Paragraph("Please pay :)"));
-            document.add(new Paragraph( stations.get(1).toString()));
             document.close();
         }
 
