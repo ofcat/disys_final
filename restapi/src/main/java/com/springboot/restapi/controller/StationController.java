@@ -6,7 +6,9 @@ import com.itextpdf.kernel.font.PdfFontFactory;
 import com.itextpdf.kernel.pdf.PdfDocument;
 import com.itextpdf.kernel.pdf.PdfWriter;
 import com.itextpdf.layout.Document;
+import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Paragraph;
+import com.itextpdf.layout.element.Table;
 import com.itextpdf.layout.element.Text;
 import com.springboot.restapi.queue.Mq;
 import com.springboot.restapi.stationdata.CustomerStationData;
@@ -20,6 +22,7 @@ import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 @RestController
 public class StationController {
@@ -89,7 +92,7 @@ public class StationController {
                 CustomerStationData.id_station = resultSet.getInt("station_id");
                 CustomerStationData.kwh = resultSet.getInt("kwh");
                 CustomerStationData.datetime = resultSet.getDate("datetime");
-                //System.out.println(CustomerStationData.id_customer);
+
                 stations.add(CustomerStationData);
             }
 
@@ -109,17 +112,16 @@ public class StationController {
 
         public void generateInvoice(List<CustomerStationData> stations) throws IOException {
 
+           //Adjust saving path according to your system
+           // PdfWriter writer = new PdfWriter("Invoice.pdf");
+            PdfWriter writer = new PdfWriter("/Users/vasilii/Downloads/Invoice.pdf");
 
-            //System.out.println(stations);
-
-
-           // System.out.println("pdpfdpfpdpfdppf");
-            PdfWriter writer = new PdfWriter("new.pdf");
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
 
-
+            Paragraph lineBreak = new Paragraph("------");
+            document.add(lineBreak);
 
             Paragraph loremIpsumHeader = new Paragraph("Customer Invoice")
                     .setFont(PdfFontFactory.createFont(StandardFonts.HELVETICA))
@@ -128,11 +130,79 @@ public class StationController {
                     .setFontColor(ColorConstants.BLACK);
             document.add(loremIpsumHeader);
 
-            for(CustomerStationData csd : stations){
-                document.add(new Paragraph(csd.toString()));
-//                document.add(new Paragraph(String.valueOf(csd.id_station)));
-//                document.add(new Paragraph(String.valueOf(csd.id_customer)));
+
+            if (stations == null){
+                Paragraph noInfoMessage = new Paragraph("No Data was found for specified customer.")
+                        .setFont(PdfFontFactory.createFont(StandardFonts.HELVETICA))
+                        .setFontSize(14)
+                        .setBold()
+                        .setFontColor(ColorConstants.BLACK);
+                document.add(noInfoMessage);
             }
+
+
+//            for(CustomerStationData csd : stations){
+//                document.add(new Paragraph(csd.toString()));
+////                document.add(new Paragraph(String.valueOf(csd.id_station)));
+////                document.add(new Paragraph(String.valueOf(csd.id_customer)));
+//            }
+
+            // Creating a table
+            float [] infoTableDim = {150F, 150F, 150F, 150F};
+            Table infoTable = new Table(infoTableDim);
+
+            // Adding cells to the table
+            infoTable.addCell(new Cell().add(new Paragraph("Customer ID")));
+            infoTable.addCell(new Cell().add(new Paragraph("Station ID")));
+            infoTable.addCell(new Cell().add(new Paragraph("KWH")));
+            infoTable.addCell(new Cell().add(new Paragraph("Date")));
+
+            double totalCharge = 0.0;
+            double totalPrice;
+            String customer = null;
+
+            for(CustomerStationData csd : stations){
+                infoTable.addCell(new Cell().add(new Paragraph(String.valueOf(csd.id_customer))));
+                infoTable.addCell(new Cell().add(new Paragraph(String.valueOf(csd.id_station))));
+                infoTable.addCell(new Cell().add(new Paragraph(String.valueOf(csd.kwh))));
+                infoTable.addCell(new Cell().add(new Paragraph(String.valueOf(csd.datetime))));
+                totalCharge +=csd.kwh;
+                customer = String.valueOf(csd.id_customer);
+            }
+
+            // Adding Table to document
+            document.add(infoTable);
+
+            document.add(lineBreak);
+            Paragraph costTableHeader = new Paragraph("Payment Required");
+            document.add(costTableHeader);
+
+
+            // Setting up price per kwh
+            totalPrice = 4.99 * totalCharge;
+
+            Date date = new Date();
+
+            // Creating a table
+            float [] costTableDim = {150F, 150F, 150F, 150F};
+            Table costTable = new Table(costTableDim);
+
+            costTable.addCell(new Cell().add(new Paragraph("Customer ID")));
+            costTable.addCell(new Cell().add(new Paragraph("Total KWH")));
+            costTable.addCell(new Cell().add(new Paragraph("Total Cost")));
+            costTable.addCell(new Cell().add(new Paragraph("Last Updated")));
+
+            costTable.addCell(new Cell().add(new Paragraph(customer)));
+            costTable.addCell(new Cell().add(new Paragraph(String.valueOf(totalCharge))));
+            costTable.addCell(new Cell().add(new Paragraph(String.valueOf(totalPrice))));
+            costTable.addCell(new Cell().add(new Paragraph(String.valueOf(date))));
+
+
+            // Adding Table to document
+            document.add(costTable);
+            document.add(lineBreak);
+
+
             document.add(new Paragraph("Please pay :)"));
             document.close();
         }
